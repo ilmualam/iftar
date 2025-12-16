@@ -1,5 +1,5 @@
 /**
- * Niat Puasa & Doa Berbuka Ramadan 2025 - Interactive Audio Tool
+ * Niat Puasa & Doa Berbuka Ramadan 2026 - Interactive Audio Tool
  * Version: 1.0.0
  * Author: ilmualam.com
  * License: MIT
@@ -29,7 +29,7 @@
     // Tool Configuration
     const CONFIG = {
         version: '1.0.0',
-        storageKey: 'ilmualam_niat_puasa_2025',
+        storageKey: 'ilmualam_niat_puasa_2026',
         brandColors: {
             primary: '#249749',
             dark: '#0c3808',
@@ -228,7 +228,7 @@
             <div class="npt-container">
                 <div class="npt-header">
                     <h2 class="npt-title">🌙 Tool Interaktif Niat Puasa & Doa Berbuka</h2>
-                    <p class="npt-subtitle">Ramadan 2025 | ilmualam.com</p>
+                    <p class="npt-subtitle">Ramadan 2026 | ilmualam.com</p>
                     <div class="npt-stats">
                         <span class="npt-stat">🔥 Streak: ${userState.streak} hari</span>
                         <span class="npt-stat">📚 Dihafal: ${userState.memorized.length}/${Object.keys(DOA_DATA).length}</span>
@@ -254,7 +254,7 @@
                 
                 <div class="npt-footer">
                     <p>💡 Tips: Klik pada doa untuk menandakan sudah dihafal</p>
-                    <p class="npt-credit">Powered by <a href="https://ilmualam.com" target="_blank">ilmualam.com</a></p>
+                    <p class="npt-credit">Powered by <a href="https://www.ilmualam.com" target="_blank" rel="noopener">ilmualam.com</a></p>
                 </div>
             </div>
         `;
@@ -312,7 +312,7 @@
                         <button class="npt-btn-memorize ${isMemorized ? 'done' : ''}" data-id="${item.id}">
                             ${isMemorized ? '✅ Sudah Hafal' : '📝 Tandakan Hafal'}
                         </button>
-                        <button class="npt-btn-copy" data-id="${item.id}">📋 Salin</button>
+                        <button class="npt-btn-copy" data-id="${item.id}">📋 Copy</button>
                     </div>
                 </div>
             `;
@@ -432,8 +432,8 @@
         styles.id = 'npt-styles';
         styles.textContent = `
             .npt-container {
-                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-                max-width: 900px;
+                font-family: 'Inter', Tahoma, Geneva, Verdana, sans-serif;
+                max-width: 1200px;
                 margin: 30px auto;
                 padding: 0;
                 background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
@@ -588,10 +588,10 @@
             .npt-badge-sahur { background: #cffafe; color: #155e75; }
             
             .npt-card-arabic {
-                font-size: 1.8em;
+                font-size: 2em;
                 line-height: 2;
                 color: #0c3808;
-                font-family: 'Traditional Arabic', 'Scheherazade New', 'Amiri', serif;
+                font-family: 'Amiri','Traditional Arabic', serif;
                 text-align: right;
                 margin: 20px 0;
                 padding: 15px;
@@ -601,7 +601,7 @@
             
             .npt-card-transliteration {
                 font-style: italic;
-                color: #166534;
+                color: #0c3808;
                 margin: 15px 0;
                 padding: 10px;
                 background: #ecfdf5;
