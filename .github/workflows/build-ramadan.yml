@@ -1,0 +1,34 @@
+name: Build Ramadan JSON (MY)
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 2 * * 1"  # Isnin 02:00 UTC (10:00 MYT)
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Build data
+        run: node scripts/build-ramadan.mjs
+        env:
+          YEARS: "2025,2026,2027"
+
+      - name: Commit data
+        run: |
+          git config user.name "iftar-bot"
+          git config user.email "iftar-bot@users.noreply.github.com"
+          git add data
+          git commit -m "Update Ramadan JSON" || echo "No changes"
+          git push
