@@ -434,7 +434,7 @@
             .npt-container {
                 font-family: 'Inter', Tahoma, Geneva, Verdana, sans-serif;
                 max-width: 1200px;
-                margin: 30px auto;
+                margin: 10px auto;
                 padding: 0;
                 background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
                 border-radius: 16px;
@@ -445,7 +445,7 @@
             .npt-header {
                 background: linear-gradient(135deg, #0c3808 0%, #249749 100%);
                 color: white;
-                padding: 30px;
+                padding: 10px;
                 text-align: center;
             }
             
